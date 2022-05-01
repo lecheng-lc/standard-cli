@@ -62,7 +62,7 @@ module.exports = (plop) => {
         type: 'add',
         path: 'pages/{{ camelCase name }}/{{ camelCase name }}.json',
         templateFile: 'plop-templates/component/component.json.hbs',
-      }
+      },
     ],
   })
 }

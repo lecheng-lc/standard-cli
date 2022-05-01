@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "lib",
     "baseUrl": ".",
     "strict": true,
     "target": "ESNext",
@@ -7,10 +8,8 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
-    "types": [
-      "node"
-    ],
+    "types": ["node"],
     "lib": ["esnext"]
   },
-  "exclude": ["node_modules","./template"]
+  "exclude": ["node_modules", "src/template"]
 }

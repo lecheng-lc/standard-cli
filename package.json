@@ -7,7 +7,11 @@
     "standard": "./bin/index.js"
   },
   "scripts": {
-    "dev": "tsc --watch"
+    "dev": "tsc --watch",
+    "build": "rimraf ./lib && tsc",
+    "esFix": "eslint ./ --fix",
+    "preFix": "prettier --write ./",
+    "prepare": "husky install"
   },
   "keywords": [
     "cli",
@@ -17,6 +21,8 @@
   "type": "module",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
     "@types/ejs": "^3.1.0",
     "@types/lru-cache": "^7.6.1",
     "@types/node": "^17.0.25",
@@ -26,18 +32,26 @@
     "chalk": "^5.0.1",
     "commander": "^9.2.0",
     "cross-spawn": "^7.0.3",
+    "cz-customizable": "^6.3.0",
     "easy-table": "^1.2.0",
     "ejs": "^3.1.7",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
     "execa": "^6.1.0",
     "figlet": "^1.5.2",
     "fs-extra": "^10.1.0",
+    "husky": "^7.0.4",
     "import-fresh": "^3.3.0",
     "inquirer": "^8.2.2",
     "leven": "^4.0.0",
     "lru-cache": "^7.8.1",
     "ora": "^6.1.0",
     "plop": "^3.0.5",
-    "prettier": "^2.6.2",
+    "prettier": "^2.6.0",
     "pretty-format": "^28.0.2",
     "semver": "^7.3.7",
     "standalone": "^0.0.1",
@@ -48,5 +62,13 @@
   },
   "dependencies": {
     "axios": "^0.27.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-configrc.cjs"
+    }
   }
 }

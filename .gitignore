@@ -9,8 +9,7 @@ node_modules
 package-lock.json
 yarn.lock
 
-# dist file
-es
+
+# file
+test
 lib
-dist
-vetur

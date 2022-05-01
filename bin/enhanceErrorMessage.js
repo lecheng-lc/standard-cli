@@ -1,9 +1,7 @@
-import  {Command} from 'commander'
+import { Command } from 'commander'
 import chalk from 'chalk'
-export const nishi = ()=>{
-
-}
-export default  (methodName, log) => {
+export const nishi = () => {}
+export default (methodName, log) => {
   Command.prototype[methodName] = function (...args) {
     if (methodName === 'unknownOption' && this._allowUnknownOption) {
       return

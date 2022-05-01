@@ -31,7 +31,7 @@ module.exports = (plop) => {
       {
         type: 'add',
         path: 'pages/{{ camelCase name }}/{{ camelCase name }}.vue',
-        templateFile: 'plop-templates/component/page.vue.hbs',
+        templateFile: 'plop-templates/component/component.vue.hbs',
       },
     ],
   })

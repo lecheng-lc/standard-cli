@@ -1,5 +1,0 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-echo "😊😊😊😊😊😊 执行commit-msg校验 😊😊😊😊😊😊"
-npx --no-install commitlint --edit $1  # 两种方式可以用git cz 或者使用git commit  使用git commit 就需要把这段注释放开
-

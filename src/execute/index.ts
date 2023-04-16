@@ -81,9 +81,9 @@ export const addCmLint = (addType: boolean, options: Options) => {
   packageJson.devDependencies = Object.assign(packageJson.devDependencies, commitLintInfo)
   writeFileSync(`${CWD}/package.json`, JSON.stringify(packageJson, null, 2))
   const fileExt = packageJson.type === 'module' ? '.cjs' : '.js'
-  const commitDestDir = `${CWD}/commitlint.config.${fileExt}`
-  const czDestDir = `${CWD}/.cz-configrc.${fileExt}`
-  const commitTargetDir = path.resolve(__dirname, '../../template/commitlint.config.ss')
+  const commitDestDir = `${CWD}/commitlint.config${fileExt}`
+  const czDestDir = `${CWD}/.cz-configrc${fileExt}`
+  const commitTargetDir = path.resolve(__dirname, '../../template/commitlint.config.js')
   const czTargetDir = path.resolve(__dirname, '../../template/.cz-configrc.js')
   !fs.existsSync(commitDestDir) ? fs.writeFileSync(commitDestDir, '') : ''
   !fs.existsSync(czDestDir) ? fs.writeFileSync(czDestDir, '') : ''
